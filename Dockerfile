@@ -10,7 +10,7 @@ RUN   apk --no-cache upgrade && \
       cd xmrig && \
       mkdir build && \
       cmake -DCMAKE_BUILD_TYPE=Release -DWITH_HTTPD=OFF . && \
-      sed 's/1/0/' src/donate.h > src/donate.h && \
+      sed 's/1/0/' src/donate.h && \
       make && \
       apk del \
         build-base \
